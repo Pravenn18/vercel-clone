@@ -19,14 +19,6 @@ const generate_1 = require("./generate");
 const simple_git_1 = __importDefault(require("simple-git"));
 const getAllFiles_1 = require("./getAllFiles");
 const uploadtoR2_1 = require("./uploadtoR2");
-// const getAllFiles = require('./getAllFiles');
-// const uploadFile = require('./uploadtoR2');
-// const generate = require('./generate');
-// const simpleGit = require('simple-git');
-// const cors = require('cors');
-// const path = require('path');
-// const express = require('express');
-``;
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
@@ -45,6 +37,6 @@ app.post('/url', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         id: id
     });
 }));
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+app.listen(3001, () => {
+    console.log('Server is running on port 3001');
 });
