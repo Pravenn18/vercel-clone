@@ -15,14 +15,14 @@ app.post('/url', async(req, res) => {
     console.log(repoUrl);
     const id = generate();
     console.log(id);
+
     await simpleGit().clone(repoUrl, `dist/output/${id}`);
     const files = getAllFiles(path.join(__dirname, `output/${id}`));
 
-    files.forEach(async file => {
+    files.forEach(async (file) => {
         await uploadFile(file.slice(__dirname.length + 1), file);
     })
     console.log("Uploaded to R2");
-    
     res.json({
         id: id
     });
