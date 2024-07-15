@@ -24,7 +24,8 @@ app.post('/url', async(req, res) => {
     })
     console.log("Uploaded to R2");
     res.json({
-        id: id
+        id: id,
+        status: "Uploaded to R2"
     });
 })
 
