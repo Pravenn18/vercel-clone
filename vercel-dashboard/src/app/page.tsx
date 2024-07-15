@@ -1,8 +1,11 @@
+'use client'
 import { ProjectCard } from "@/components/card";
 import { Header } from "@/components/header";
 import { TopBar } from "@/components/top-bar";
+import { addHookAliases } from "next/dist/server/require-hook";
 
 const Home = () => {
+
   return (
     <div className="">
       <Header />
