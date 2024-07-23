@@ -7,13 +7,13 @@ interface MyObject {
   id: string;
 }
 
-
 const LinkInput = () => {
   const [link, setLink] = useState("");
   const [uploadResponse, setUploadResponse] = useState<MyObject>();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setLink(event.target.value);
+    console.log("a");
   };
 
   useEffect(() => {
